@@ -6,12 +6,12 @@ import getAllContact from '../redux/action/getAllContact';
 
 // components
 import CardContact from "../components/CardContact";
+import Loading from "../components/Loading";
 
 export default function ContactApps() {
     const dispatch = useDispatch();
     const loading = useSelector(state=>state.loadingReducer.loading);
     const contacts = useSelector(state=>state.contactReducer.allContact);
-
 
     useEffect(() => {
         dispatch(getAllContact())
@@ -20,27 +20,23 @@ export default function ContactApps() {
     return (
         <>
             <div className="container mt-2">
-                <div className="row">
-                    {
-                        loading ?
-                        <div className="d-flex.justify-content-center mt-5">
-                            <div className="spinner-border" role="status">
-                                <span className="visually-hidden">Loading...</span>
-                            </div>
+                {
+                    loading ?
+                        <Loading/>
+                    :
+                    contacts.length === 0 ?
+                        <div className="text-center m-2 p-4 border border-white 
+                        rounded"><span className="text-white">Data Not Found</span>
                         </div>
-                        :
-                        contacts.length === 0 ?
-                        <div className="text-center m-2 p-4">Data Not Found</div>
-                        :
-                        contacts.map((contact) => {
-                            return (
-                                <div key={contact.id} className="col-md-3 p-1">
-                                    <CardContact contact={contact}/>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
+                    :
+                    contacts.map((contact) => {
+                        return (
+                            <div key={contact.id} className="col-md-3 p-1">
+                                <CardContact contact={contact}/>
+                            </div>
+                        )
+                    })
+                }
             </div>
         </>
     )
