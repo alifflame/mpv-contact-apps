@@ -1,7 +1,32 @@
-import React from "react";
+import React, {useEffect} from "react";
+import {useDispatch, useSelector} from 'react-redux';
+import {useParams} from 'react-router-dom';
+
+//action
+import detailContact from "../redux/action/getDetailContact";
+
+//component
+import CardContact from '../components/CardContact'
 
 export default function DetailContact() {
+    const dispatch = useDispatch();
+    const params = useParams();
+
+    const contact = useSelector(state => state.contactReducer.detailContact)
+
+    useEffect(() => {
+        dispatch(detailContact(params.id))
+    }, [])
+
     return(
-        <p>Detail</p>
+        <div className="container-fluid">
+            <div className="row">
+                <div className="d-flex justfiy-content-center">
+                    <div className="w-50">
+                        <CardContact contact={contact} fromDetail={true}/>
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }

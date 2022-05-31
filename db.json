@@ -1,11 +1,32 @@
 {
   "contacts": [
-      {
-          "name": "alif aunurrohim",
-          "email": "alifaunurrohim@gmail.com",
-          "phonenumber": "089514674625",
-          "category": "family",
-          "id": 1
-      }
+    {
+      "name": "alif",
+      "email": "alif@gmail.com",
+      "phonenumber": "089514674625",
+      "category": "family",
+      "id": 1
+    },
+    {
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "phonenumber": "089514674625",
+      "category": "family",
+      "id": 2
+    },
+    {
+      "name": "ben",
+      "email": "ben@gmail.com",
+      "phonenumber": "089514674625",
+      "category": "friend",
+      "id": 3
+    },
+    {
+      "name": "fred",
+      "email": "fred@gmail.com",
+      "phonenumber": "089514674625",
+      "category": "work",
+      "id": 4
+    }
   ]
 }

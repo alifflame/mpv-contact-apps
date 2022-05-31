@@ -5,8 +5,8 @@ const allContact = () => {
     return function(dispatch) {
         dispatch({type: "LOADING", payload:true})
         axios({
-            url: "http://localhost:3001/contacts",
-            method: "get"
+            url: `http://localhost:3001/contacts`,
+            method: 'get'
         })
         .then(({data}) => {
             dispatch({type: "LOADING", payload:false})
@@ -18,10 +18,10 @@ const allContact = () => {
                 icon: "error",
                 title: `${err.message} ${err.status}`,
                 showConfirmButton: false,
-                timer: 1000
+                timer: 2000
             })
         });
     }
 }
 
-export default allContact;
+export default allContact
