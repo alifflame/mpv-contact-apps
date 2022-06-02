@@ -10,7 +10,8 @@ export default function AddContact(params) {
     const [phone, setPhone] = useState("");
     const [category, setCategory] = useState("family");
 
-    const handleSubmit = (e) => {
+    const handleSubmit2 = (e) => {
+        console.log("test handleSubmit");
         e.preventDefault()
         if (name === "" || email === "" || phone === "") {
             Swal.fire({
@@ -56,7 +57,7 @@ export default function AddContact(params) {
                             className="btn-close" data-bs-dismiss="modal"
                             aria-label="Close"></button>
                         </div>
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={handleSubmit2}>
                             <div className="modal-body">
                                 <div className="form-group mt-1">
                                     <label htmlFor="name">Name</label>
@@ -83,14 +84,14 @@ export default function AddContact(params) {
                                     </select>
                                 </div>
                             </div>
-                        </form>
-                        <div className="modal-footer">
-                            <button data-bs-dismiss="modal" onClick={()=>resetForm()} 
-                            type="button" className="btn btn-danger">Cancel</button>
+                            <div className="modal-footer">
+                                <button data-bs-dismiss="modal" onClick={()=>resetForm()} 
+                                type="button" className="btn btn-danger">Cancel</button>
 
-                            <button data-bs-dismiss="modal" type="submit" 
-                            className="btn btn-secondary">Submit</button>
-                        </div>
+                                <button data-bs-dismiss="modal" type="submit" 
+                                className="btn btn-secondary">Submit</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

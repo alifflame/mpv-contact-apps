@@ -8,15 +8,15 @@
       "id": 1
     },
     {
-      "name": "admin",
-      "email": "admin@gmail.com",
+      "name": "albedo",
+      "email": "albedo@gmail.com",
       "phonenumber": "089514674625",
       "category": "family",
       "id": 2
     },
     {
-      "name": "ben",
-      "email": "ben@gmail.com",
+      "name": "hendra",
+      "email": "hendra@gmail.com",
       "phonenumber": "089514674625",
       "category": "friend",
       "id": 3
@@ -27,6 +27,13 @@
       "phonenumber": "089514674625",
       "category": "work",
       "id": 4
+    },
+    {
+      "name": "sebas",
+      "email": "sebas@gasd.com",
+      "phonenumber": "23131",
+      "category": "work",
+      "id": 5
     }
   ]
 }

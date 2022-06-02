@@ -64,7 +64,7 @@ export default function UpdateContactForm(props) {
 
             <div className="modal fade" id="formUpdateContact" tabIndex="-1"
             aria-labelledby="formUpdateContact" aria-hidden="true">
-                <div className="modal-gialog">
+                <div className="modal-dialog">
                     <div className="modal-content">
                     <div className="modal-header">
                             <h5 className="modal-title">Form Update Contact</h5>
